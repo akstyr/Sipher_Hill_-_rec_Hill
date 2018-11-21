@@ -1,7 +1,7 @@
 language: python
 python:
   - "3.6"
-sudo: false
+#sudo: false
 
 notifications:
   email:
@@ -9,3 +9,5 @@ notifications:
     - katya.grohotova.4@gmail.com
     on_success: always
     on_failure: always
+
+script: pytest

@@ -192,34 +192,34 @@ def enc_rec_hill(A, B):
     print('Шифртекст: ', k)
     return save_key(Key[0]), save_key(Key[1])
 
-b = 'n'
-A = np.zeros((1, 1), dtype=int)
-B = np.zeros((1, 1), dtype=int)
-while b == 'n':
-    while True:
-        print(
-            """Что вы хотите сделать?\n1 - зашифровать шифром Хилла\n2 - расшифровать шифр Хилла\n3 - зашифровать реккурентным шифром Хилла\n4 - расшифровать реккурентный шифр Хилла""")
-        a = input()
-        a = a.replace(' ', '')
-        if a == '1':
-            A = enc_hill(A)
-            break
-        elif a == '2':
-            A = dec_hill(A)
-            break
-        elif a == '3':
-            A, B = enc_rec_hill(A, B)
-            break
-        elif a == '4':
-            A, B = dec_rec_hill(A, B)
-            break
-        else:
-            print('Ошибка: Некорректный выбор действия')
-    while True:
-        print('Завершить работу программы? y/n')
-        b = input()
-        b = b.replace(' ', '')
-        if b == 'y' or b == 'n':
-            break
-        else:
-            print('Ошибка: Некорректный ввод')
+# b = 'n'
+# A = np.zeros((1, 1), dtype=int)
+# B = np.zeros((1, 1), dtype=int)
+# while b == 'n':
+#     while True:
+#         print(
+#             """Что вы хотите сделать?\n1 - зашифровать шифром Хилла\n2 - расшифровать шифр Хилла\n3 - зашифровать реккурентным шифром Хилла\n4 - расшифровать реккурентный шифр Хилла""")
+#         a = input()
+#         a = a.replace(' ', '')
+#         if a == '1':
+#             A = enc_hill(A)
+#             break
+#         elif a == '2':
+#             A = dec_hill(A)
+#             break
+#         elif a == '3':
+#             A, B = enc_rec_hill(A, B)
+#             break
+#         elif a == '4':
+#             A, B = dec_rec_hill(A, B)
+#             break
+#         else:
+#             print('Ошибка: Некорректный выбор действия')
+#     while True:
+#         print('Завершить работу программы? y/n')
+#         b = input()
+#         b = b.replace(' ', '')
+#         if b == 'y' or b == 'n':
+#             break
+#         else:
+#             print('Ошибка: Некорректный ввод')
